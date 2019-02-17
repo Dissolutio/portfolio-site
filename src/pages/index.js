@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import Img from "gatsby-image";
 import SEO from "../components/seo";
 import TextBrickH2P from "../components/TextBrickH2P";
+import "../utilities/reset.css";
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
