@@ -5,11 +5,10 @@ import styled from "styled-components";
 
 import BlogThemeContext from "../BlogThemeContext";
 import Header from "./header";
-
 import urlString from "../backgroundURL";
 
 const Layout = ({ children }) => (
-  <div>
+  <>
     <Header />
     <Main bgUrl={urlString}>{children}</Main>
     <footer>
@@ -17,7 +16,7 @@ const Layout = ({ children }) => (
       {` `}
       <a href="https://www.gatsbyjs.org">Gatsby</a>
     </footer>
-  </div>
+  </>
 );
 
 Layout.propTypes = {
