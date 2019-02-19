@@ -9,22 +9,40 @@ import urlString from "../backgroundURL";
 const Layout = ({ data, children }) => (
   <LayoutWrapper bgUrl={urlString}>
     <Header data={data} />
-    <Main bgUrl={urlString}>{children}</Main>
+    <Main>{children}</Main>
     <footer>
       © {new Date().getFullYear()}, Built with
       {` `}
       <a href="https://www.gatsbyjs.org">Gatsby</a>
     </footer>
-  </>
+  </LayoutWrapper>
 );
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
 };
-const Main = styled.div`
-  width: 70%;
-  margin-left: 30%;
-  background-color: #e4572e;
+const LayoutWrapper = styled.div`
   background-image: url("${props => props.bgUrl}");
+  background-color: #e4572e;
+  position: absolute;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+`;
+const Main = styled.div`
+  margin-left: 31%;
+  max-width: 70%;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 2rem;
+  }
 `;
 export default Layout;
