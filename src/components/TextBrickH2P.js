@@ -327,7 +327,7 @@ export default function TextBrickH2P() {
         and ragged Fuller domes, dim figures moving toward him in the coffin for
         Armitage’s call.
       </p>
-      <h3>Wind</h3>
+      <h3 id="ref-point">Wind</h3>
       <p>
         That was Wintermute, manipulating the lock the way it had manipulated
         the drone micro and the amplified breathing of the Flatline as a
