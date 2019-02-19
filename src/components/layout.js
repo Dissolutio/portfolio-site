@@ -7,8 +7,8 @@ import BlogThemeContext from "../BlogThemeContext";
 import Header from "./header";
 import urlString from "../backgroundURL";
 
-const Layout = ({ children }) => (
-  <>
+const Layout = ({ data, children }) => (
+  <LayoutWrapper bgUrl={urlString}>
     <Header />
     <Main bgUrl={urlString}>{children}</Main>
     <footer>
