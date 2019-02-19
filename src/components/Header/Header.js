@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 import { SquareFluidImage } from "./GatsbynautImage";
+import MainNav from "./MainNav";
 import { rhythm, scale } from "utilities/typography";
 
 const Header = ({ data }) => (
@@ -15,10 +16,7 @@ const Header = ({ data }) => (
         <h1>Hi people</h1>
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>
-        <StyledLink to="/page-2/">Go to page 2</StyledLink>
-        <StyledLink to="/styled-components/">
-          Go to styled-components example page
-        </StyledLink>
+        <MainNav />
       </HeaderContent>
     </HeaderContainer>
     <HeroBackgroundDiv>
@@ -26,20 +24,7 @@ const Header = ({ data }) => (
     </HeroBackgroundDiv>
   </HeaderWrapper>
 );
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #6fffe9;
-  padding: 0.6rem;
-  display: block;
-  border: none;
-  box-shadow: none;
-  &:hover {
-    border-bottom: 3px solid #6fffe9;
-  }
-  small {
-    font-family: monospace;
-  }
-`;
+
 const HeaderContent = styled.div`
   flex-grow: 1;
   flex-shrink: 0;
