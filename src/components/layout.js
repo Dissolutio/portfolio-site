@@ -3,13 +3,12 @@ import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 
-import BlogThemeContext from "../BlogThemeContext";
-import Header from "./header";
+import Header from "components/Header/Header";
 import urlString from "../backgroundURL";
 
 const Layout = ({ data, children }) => (
   <LayoutWrapper bgUrl={urlString}>
-    <Header />
+    <Header data={data} />
     <Main bgUrl={urlString}>{children}</Main>
     <footer>
       © {new Date().getFullYear()}, Built with
