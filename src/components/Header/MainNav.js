@@ -11,10 +11,10 @@ export default class MainNav extends Component {
             <StyledLink to="/about">About</StyledLink>
           </li>
           <li>
-            <StyledLink to="/">Blog</StyledLink>
+            <StyledLink to="/blog">Blog</StyledLink>
           </li>
           <li>
-            <StyledLink to="/">Hire Me</StyledLink>
+            <StyledLink to="/about">Hire Me</StyledLink>
           </li>
         </ul>
       </MainNavWrapper>
