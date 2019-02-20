@@ -10,7 +10,7 @@ const Header = ({ data }) => (
   <HeaderWrapper>
     <HeaderContainer>
       <HeaderContent>
-        <HeaderAvatar href="#ref-point">
+        <HeaderAvatar to="/">
           <SquareFluidImage />
         </HeaderAvatar>
         <h1>Hi people</h1>
@@ -69,7 +69,7 @@ const HeroBackgroundImg = styled(Img)`
   opacity: 0.6;
 `;
 
-const HeaderAvatar = styled.a`
+const HeaderAvatar = styled(Link)`
   img {
     border-radius: 50%;
   }
