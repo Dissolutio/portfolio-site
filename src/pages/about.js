@@ -11,10 +11,9 @@ const SecondPage = ({ data }) => (
     <h1>About Me</h1>
     <p>My name is John, I am mostly curious and thankful.</p>
     <p>
-      I am still a fairly new developer. In January 2018 is when I decided I was
-      going to learn how to code and get a developer job or build a freelance
-      business. It's been a lot of work since then, but but work with passion
-      behind it can really make time fly.
+      In January 2018 is when I decided I was going to learn how to code and get
+      a developer job or build a freelance business. It's been a lot of work
+      since then, but work with passion behind it can really make the time fly.
     </p>
     <p>
       My main tools lately are Node.js and React.js, but the modern toolset is
