@@ -23,7 +23,7 @@ const SquareFluidImage = () => (
           }
         }
       }
-      query {
+      query gatsbyAstronaut {
         file(relativePath: { eq: "gatsby-astronaut.png" }) {
           ...squareImage
         }

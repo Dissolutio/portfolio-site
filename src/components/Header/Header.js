@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 import { SquareFluidImage } from "./GatsbynautImage";
 import MainNav from "./MainNav";
-import { rhythm, scale } from "utilities/typography";
 
 const Header = ({ data }) => (
   <HeaderWrapper>

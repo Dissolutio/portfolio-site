@@ -14,7 +14,7 @@ export default class MainNav extends Component {
             <StyledLink to="/blog">Blog</StyledLink>
           </li>
           <li>
-            <StyledLink to="/about">Hire Me</StyledLink>
+            <StyledLink to="/hire-me">Hire Me</StyledLink>
           </li>
         </ul>
       </MainNavWrapper>
@@ -28,7 +28,7 @@ const MainNavWrapper = styled.nav`
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #6fffe9;
+  color: ${props => props.theme.color.primary};
   padding: 0.6rem;
   display: block;
   border: none;
