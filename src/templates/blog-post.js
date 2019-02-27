@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import Layout from "components/layouts";
+import Layout from "layouts";
 import { rhythm, scale } from "utilities/typography";
 
 class BlogPostTemplate extends React.Component {
