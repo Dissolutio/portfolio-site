@@ -1,16 +1,17 @@
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+
 const ProfilePic = () => (
   <StaticQuery
     query={graphql`
-      fragment squareImage on File {
-        childImageSharp {
-          fluid(maxWidth: 200, maxHeight: 200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       query profilePic {
         file(relativePath: { eq: "profile-pic.jpg" }) {
-          ...squareImage
+          childImageSharp {
+            fluid(maxWidth: 200, maxHeight: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     `}

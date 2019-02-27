@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
-import { SquareFluidImage } from "./GatsbynautImage";
+import { ProfilePic } from "./Avatar";
 import MainNav from "./MainNav";
 
 const Header = ({ data }) => (
@@ -10,7 +10,7 @@ const Header = ({ data }) => (
     <HeaderContainer>
       <HeaderContent>
         <HeaderAvatar to="/">
-          <SquareFluidImage />
+          <ProfilePic />
         </HeaderAvatar>
         <h1>Hi people</h1>
         <p>Welcome to your new Gatsby site.</p>
@@ -71,9 +71,12 @@ const HeroBackgroundImg = styled(Img)`
 const HeaderAvatar = styled(Link)`
   img {
     border-radius: 50%;
+    position: relative;
+    left: -10px;
+    top: -10px;
   }
-  height: 75px;
-  width: 75px;
+  height: 100px;
+  width: 100px;
   border: 0;
   outline: none;
   transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;

@@ -16,16 +16,13 @@ import Img from "gatsby-image";
 const SquareFluidImage = () => (
   <StaticQuery
     query={graphql`
-      fragment squareImage on File {
-        childImageSharp {
-          fluid(maxWidth: 200, maxHeight: 200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       query gatsbyAstronaut {
         file(relativePath: { eq: "gatsby-astronaut.png" }) {
-          ...squareImage
+          childImageSharp {
+            fluid(maxWidth: 200, maxHeight: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     `}
