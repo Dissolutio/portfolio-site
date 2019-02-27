@@ -18,13 +18,16 @@ StrataLayout.propTypes = {
 export default StrataLayout;
 
 const LayoutWrapper = styled.div`
-  background-color: ${props => props.theme.color.primary};
+  background-color: ${props => props.theme.color.secondary};
   position: absolute;
   padding: 1rem;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 100vh;
+  ${props => props.theme.media.small`background: dodgerblue;`}
+  ${props => props.theme.media.medium`background: mediumseagreen;`}
+  ${props => props.theme.media.large`background: palevioletred;`}
 `;
 const Main = styled.div`
   margin-left: 31%;

@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, css } from "styled-components";
 import StrataLayout from "./Strata";
 
 const Layout = ({ children, data }) => (
@@ -7,6 +7,22 @@ const Layout = ({ children, data }) => (
     <StrataLayout data={data}>{children}</StrataLayout>
   </ThemeProvider>
 );
+// MAKE OUR QUERIES
+const sizes = {
+  small: 400,
+  medium: 600,
+  large: 1000
+};
+const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (min-width: ${sizes[label] / 16}em) {
+      ${css(...args)}
+    }
+  `;
+  return acc;
+}, {});
+
+// THEN PUT THEM IN THEME
 export const theme = {
   color: {
     primary: `#00A4B1`,
@@ -14,10 +30,7 @@ export const theme = {
     black: `#060707`,
     white: `#f1f2eb`
   },
-  size: {
-    small: `only screen and (max-width: 360)`,
-    medium: `only screen and (min-width: 360)`,
-    large: `only screen and (min-width: 1000)`
-  }
+  media: media
 };
+
 export default Layout;
