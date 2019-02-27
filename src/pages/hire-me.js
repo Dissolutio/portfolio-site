@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import resumePDF from "../assets/JohnMoenFrontendResume.pdf";
-import Layout from "../components/layout";
+import Layout from "components/layouts";
 
 export default class HireMePage extends Component {
   render() {

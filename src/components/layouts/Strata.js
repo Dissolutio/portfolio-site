@@ -1,29 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 
 import Header from "components/Header/Header";
-import urlString from "../backgroundURL";
+import urlString from "backgroundURL";
 
-const Layout = ({ data, children }) => (
+const StrataLayout = ({ data, children }) => (
   <LayoutWrapper bgUrl={urlString}>
     <Header data={data} />
     <Main>{children}</Main>
-    <footer>
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </footer>
   </LayoutWrapper>
 );
-
-Layout.propTypes = {
+StrataLayout.propTypes = {
   children: PropTypes.node.isRequired
 };
+
+export default StrataLayout;
+
 const LayoutWrapper = styled.div`
-  background-image: url("${props => props.bgUrl}");
-  background-color: #e4572e;
+  background-color: ${props => props.theme.color.primary};
   position: absolute;
   padding: 1rem;
   top: 0;
@@ -45,4 +40,3 @@ const Main = styled.div`
     padding: 2rem;
   }
 `;
-export default Layout;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 
-import Layout from "../components/layout";
+import Layout from "components/layouts";
 import SEO from "../components/seo";
 
 const SecondPage = ({ data }) => (
