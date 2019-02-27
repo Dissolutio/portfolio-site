@@ -1,15 +1,13 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
-import styled from "styled-components";
-import Layout from "components/layout";
-import Img from "gatsby-image";
+import { graphql } from "gatsby";
+import Layout from "components/layouts";
 import SEO from "components/seo";
-import TextBrickH2P from "components/TextBrickH2P";
+import Section1 from "components/Section1";
 import "utilities/reset.css";
 const IndexPage = ({ data }) => (
   <Layout data={data}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <TextBrickH2P />
+    <Section1 />
   </Layout>
 );
 
