@@ -1,6 +1,6 @@
 import React from "react";
-
-export default function Section1() {
+import styled from "styled-components";
+const Section1 = () => {
   return (
     <>
       <h2>
@@ -27,6 +27,30 @@ export default function Section1() {
         equally as may be necessary except on a question of Adjournment shall be
         presented to the Duties of the said House shall be the Vice President.
       </p>
+      <ActionButton>Learn More</ActionButton>
     </>
   );
-}
+};
+export default Section1;
+
+const ActionButton = styled.button`
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+  background-color: transparent;
+  border-radius: 0.35em;
+  border: solid 3px #efefef;
+  color: ${props => props.theme.color.black};
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  height: calc(2.75em + 6px);
+  line-height: 2.75em;
+  min-width: 10em;
+  padding: 0 1.5em;
+  text-align: center;
+  white-space: nowrap;
+  &:hover {
+    border-color: #49bf9d;
+    color: #49bf9d !important;
+  }
+`;
