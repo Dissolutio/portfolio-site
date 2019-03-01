@@ -29,12 +29,11 @@ const MainNavWrapper = styled.nav`
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${props => props.theme.color.primary};
-  padding: 0.6rem;
-  display: block;
   border: none;
   box-shadow: none;
+
   &:hover {
-    border-bottom: 3px solid rgba(40, 48, 68, 1);
+    border-bottom: 3px solid ${props => props.theme.color.primary};
   }
   small {
     font-family: monospace;

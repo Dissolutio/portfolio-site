@@ -6,22 +6,20 @@ import { ProfilePic } from "./Avatar";
 import MainNav from "./MainNav";
 
 const Header = ({ data }) => (
-  <HeaderWrapper>
-    <HeaderContainer>
-      <HeaderContent>
-        <HeaderAvatar to="/">
-          <ProfilePic />
-        </HeaderAvatar>
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <MainNav />
-      </HeaderContent>
-    </HeaderContainer>
+  <HeaderContainer>
+    <HeaderContent>
+      <HeaderAvatar to="/">
+        <ProfilePic />
+      </HeaderAvatar>
+      <h1>Hi people</h1>
+      <p>Welcome to your new Gatsby site.</p>
+      <p>Now go build something great.</p>
+      <MainNav />
+    </HeaderContent>
     <HeroBackgroundDiv>
       <HeroBackgroundImg fluid={data.background.childImageSharp.fluid} />
     </HeroBackgroundDiv>
-  </HeaderWrapper>
+  </HeaderContainer>
 );
 
 const HeaderContent = styled.div`
@@ -32,15 +30,7 @@ const HeaderContent = styled.div`
   width: 100%;
   padding: 1rem;
 `;
-const HeaderWrapper = styled.div`
-  background-color: #1f1815;
-  color: rgba(255, 255, 255, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 31%;
-`;
+
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -52,6 +42,13 @@ const HeaderContainer = styled.div`
   height: 100%;
   z-index: 10;
   opacity: 0.9;
+  background-color: #1f1815;
+  background-attachment: scroll, fixed;
+  background-image: url("images/overlay.png"),
+    url("../images/jason-leung-714414-unsplash.jpg");
+  background-position: top left, left;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, auto 120%;
 `;
 const HeroBackgroundDiv = styled.div`
   position: absolute;
@@ -65,16 +62,11 @@ const HeroBackgroundDiv = styled.div`
 const HeroBackgroundImg = styled(Img)`
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.9;
 `;
 
 const HeaderAvatar = styled(Link)`
-  img {
-    border-radius: 50%;
-    position: relative;
-    left: -10px;
-    top: -10px;
-  }
+  position: relative;
   height: 100px;
   width: 100px;
   border: 0;
@@ -84,6 +76,9 @@ const HeaderAvatar = styled(Link)`
   margin: 0 0 1em 0;
   border: 0;
   display: inline-block;
+  img {
+    border-radius: 50%;
+  }
 `;
 
 export default Header;
