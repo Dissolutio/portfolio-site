@@ -1,8 +1,7 @@
 import Typography from "typography";
-import anonymousTheme from "typography-theme-anonymous";
+import usWebDesignStandardsTheme from "typography-theme-us-web-design-standards";
 
-const typography = new Typography(anonymousTheme);
-
+const typography = new Typography(usWebDesignStandardsTheme);
 export const rhythm = typography.rhythm;
 export const scale = typography.scale;
 export default typography;
