@@ -32,11 +32,14 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
+    "react-images": "^0.5.19",
     "react-typography": "^0.16.18",
+    "sanitize.css": "^8.0.0",
     "styled-components": "^4.1.3",
     "typography": "^0.16.18",
     "typography-theme-anonymous": "^0.15.10",
-    "typography-theme-grand-view": "^0.16.18"
+    "typography-theme-grand-view": "^0.16.18",
+    "typography-theme-us-web-design-standards": "^0.16.18"
   },
   "keywords": [
     "gatsby"
