@@ -72,7 +72,7 @@ module.exports = {
         background_color: `#e4572e`,
         theme_color: `#6fffe9`,
         display: `minimal-ui`,
-        icon: `src/assets/iconfinder_Newsvine_128x128_10922.png` // This path is relative to the root of the site.
+        icon: `src/assets/iconfinder_Newsvine_128x128_10922.png`
       }
     },
     {
@@ -80,15 +80,7 @@ module.exports = {
       options: {
         pathToConfigModule: "src/utilities/typography"
       }
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`monoton`]
-      }
     }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ]
 };
