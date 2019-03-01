@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import Layout from "layouts";
+import StrataLayout from "layouts/StrataLayout";
 import { rhythm, scale } from "utilities/typography";
 
 class BlogPostTemplate extends React.Component {
@@ -11,7 +11,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext;
     console.log(data);
     return (
-      <Layout location={location} data={data}>
+      <StrataLayout location={location} data={data}>
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
@@ -51,7 +51,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
-      </Layout>
+      </StrataLayout>
     );
   }
 }

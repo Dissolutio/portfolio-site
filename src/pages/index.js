@@ -1,14 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "layouts";
+import StrataLayout from "layouts/StrataLayout";
 import SEO from "components/seo";
 import Section1 from "components/Section1";
-import "utilities/reset.css";
 const IndexPage = ({ data }) => (
-  <Layout data={data}>
+  <StrataLayout data={data}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Section1 />
-  </Layout>
+  </StrataLayout>
 );
 
 export default IndexPage;

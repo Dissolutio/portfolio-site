@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import resumePDF from "../assets/JohnMoenFrontendResume.pdf";
-import Layout from "layouts";
+import StrataLayout from "layouts/StrataLayout";
 
 export default class HireMePage extends Component {
   render() {
@@ -16,12 +16,12 @@ export default class HireMePage extends Component {
     `;
 
     return (
-      <Layout location={location} data={data}>
+      <StrataLayout location={location} data={data}>
         <a href={resumePDF}>
           <Button>View PDF version</Button>
         </a>
         <Img fluid={data.resumeImage.childImageSharp.fluid} alt="resume" />
-      </Layout>
+      </StrataLayout>
     );
   }
 }

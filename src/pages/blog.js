@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 
-import Layout from "layouts";
+import StrataLayout from "layouts/StrataLayout";
 import SEO from "../components/seo";
 import PostGroupList from "components/PostGroupList";
 
@@ -11,7 +11,7 @@ export default class BlogPage extends Component {
     const { data, location } = this.props;
     const posts = [...data.allMarkdownRemark.edges];
     return (
-      <Layout location={location} data={data}>
+      <StrataLayout location={location} data={data}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <h1>Blog</h1>
         <PostGroupList
@@ -34,7 +34,7 @@ export default class BlogPage extends Component {
           groupTitle="Personal"
           groupSortTitle="Personal"
         />
-      </Layout>
+      </StrataLayout>
     );
   }
 }

@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 
-import Layout from "layouts";
+import StrataLayout from "layouts/StrataLayout";
 import SEO from "../components/seo";
 
 const SecondPage = ({ data }) => (
-  <Layout data={data}>
+  <StrataLayout data={data}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <h1>About Me</h1>
     <p>My name is John, I am mostly curious and thankful.</p>
@@ -38,7 +38,7 @@ const SecondPage = ({ data }) => (
       There's a lot of work to do, and it makes my life so easy lucky and free
       to know my place in the struggle.
     </p>
-  </Layout>
+  </StrataLayout>
 );
 
 export default SecondPage;
