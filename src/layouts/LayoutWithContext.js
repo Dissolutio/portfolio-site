@@ -28,15 +28,12 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired
 };
 const LayoutWrapper = styled.div`
-  background-image: url("${props => props.bgUrl}");
-  background-color:  ${props => props.theme.primary};
   position: absolute;
   padding: 1rem;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 100vh;
-  @media
 `;
 const Main = styled.div`
   margin-left: 31%;
