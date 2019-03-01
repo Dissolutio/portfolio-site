@@ -73,3 +73,5 @@ rollover/
 \.env\.development
 
 \.env\.production
+
+playground-gatsby\.code-workspace
