@@ -1,7 +1,7 @@
 import React from "react";
 import PostListing from "./PostListing";
 
-export default props => {
+const PostGroupList = props => {
   // Sort posts if category name provided
   let { posts } = props;
   if (props.groupSortTitle) {
@@ -23,3 +23,4 @@ export default props => {
     </div>
   );
 };
+export default PostGroupList;

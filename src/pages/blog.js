@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import StrataLayout from "layouts/StrataLayout";
 import SEO from "../components/seo";
