@@ -11,9 +11,15 @@ const Header = ({ data }) => (
       <HeaderAvatar to="/">
         <ProfilePic />
       </HeaderAvatar>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
+      <h1>John Moen</h1>
+      <h2>Frontend Developmer</h2>
+      <ul className="icons">
+        <li>
+          <a href="https://github.com/Dissolutio" className="icon fa-github">
+            <span className="label">Github</span>
+          </a>
+        </li>
+      </ul>
       <MainNav />
     </HeaderContent>
     <HeroBackgroundDiv>
@@ -29,6 +35,12 @@ const HeaderContent = styled.div`
   margin: 0 0 2rem 0;
   width: 100%;
   padding: 1rem;
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
 `;
 
 const HeaderContainer = styled.div`
