@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 export default class MainNav extends Component {
@@ -28,13 +28,19 @@ const MainNavWrapper = styled.nav`
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: ${props => props.theme.color.primary};
+  font-size: 1.3rem;
+  color: ${props => props.theme.color.teal5};
   border: none;
   box-shadow: none;
-
-  &:hover {
-    border-bottom: 3px solid ${props => props.theme.color.primary};
+  border-bottom: 1px solid ${props => props.theme.color.teal5};
+  &:visited {
+    color: ${props => props.theme.color.primary};
   }
+  &:hover {
+    border-bottom: 3px dashed ${props => props.theme.color.secondary};
+    color: ${props => props.theme.color.secondary};
+  }
+
   small {
     font-family: monospace;
   }

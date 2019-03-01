@@ -3,8 +3,8 @@ import { css } from "styled-components";
 // MAKE OUR QUERIES
 const sizes = {
   small: 400,
-  medium: 600,
-  large: 1000
+  medium: 960,
+  large: 1500
 };
 const media = Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (...args) => css`
@@ -39,7 +39,7 @@ const theme = {
   },
   media: media
 };
-export default theme;
+export { theme };
 // USE LIKE SO
 // ${props = props.theme.media.small`
 //  css: goesHere;
