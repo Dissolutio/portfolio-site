@@ -92,6 +92,7 @@ export const pageQuery = graphql`
       }
     }
     background: file(relativePath: { eq: "jason-leung-714414-unsplash.jpg" }) {
+      publicURL
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
