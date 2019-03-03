@@ -50,5 +50,13 @@ export const hireMepageQuery = graphql`
         }
       }
     }
+    profilePic: file(relativePath: { eq: "profile-pic.jpg" }) {
+      publicURL
+      childImageSharp {
+        fluid(maxWidth: 200, maxHeight: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `;
