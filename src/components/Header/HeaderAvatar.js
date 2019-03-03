@@ -4,12 +4,12 @@ import Img from "gatsby-image";
 import { Link } from "gatsby";
 
 const HeaderAvatar = ({ fluid }) => (
-  <HeaderAvatarContainer>
+  <HomePageLinkAvatar to="/">
     <AvatarOverlay />
     <Img fluid={fluid} />
-  </HeaderAvatarContainer>
+  </HomePageLinkAvatar>
 );
-const HeaderAvatarContainer = styled(Link)`
+const HomePageLinkAvatar = styled(Link)`
   position: relative;
   height: 100px;
   width: 100px;
