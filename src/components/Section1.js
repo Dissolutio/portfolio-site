@@ -38,7 +38,7 @@ const ActionButton = styled.button`
     border-color 0.2s ease-in-out;
   background-color: transparent;
   border-radius: 0.35em;
-  border: solid 3px #efefef;
+  border: solid 3px ${props => props.theme.color.primary};
   color: ${props => props.theme.color.black};
   cursor: pointer;
   display: inline-block;
