@@ -1,8 +1,8 @@
 import Typography from "typography";
-import usWebDesignStandardsTheme from "typography-theme-us-web-design-standards";
+import anonymousTheme from "typography-theme-anonymous";
 
 const typography = new Typography({
-  ...usWebDesignStandardsTheme,
+  ...anonymousTheme,
   baseFontSize: "16px"
 });
 
