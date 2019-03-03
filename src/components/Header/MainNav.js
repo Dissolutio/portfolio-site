@@ -5,7 +5,7 @@ import styled from "styled-components";
 export default class MainNav extends Component {
   render() {
     return (
-      <MainNavWrapper>
+      <nav>
         <ul>
           <li>
             <StyledLink to="/about">About</StyledLink>
@@ -17,31 +17,22 @@ export default class MainNav extends Component {
             <StyledLink to="/hire-me">Hire Me</StyledLink>
           </li>
         </ul>
-      </MainNavWrapper>
+      </nav>
     );
   }
 }
-const MainNavWrapper = styled.nav`
-  ul {
-    list-style: none;
-  }
-`;
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 1.3rem;
-  color: ${props => props.theme.color.teal5};
+  color: ${props => props.theme.color.blue5};
   border: none;
   box-shadow: none;
-  border-bottom: 1px solid ${props => props.theme.color.teal5};
+  border-bottom: 1px solid ${props => props.theme.color.blue5};
   &:visited {
-    color: ${props => props.theme.color.primary};
+    color: ${props => props.theme.color.blue5};
   }
   &:hover {
-    border-bottom: 3px dashed ${props => props.theme.color.secondary};
-    color: ${props => props.theme.color.secondary};
-  }
-
-  small {
-    font-family: monospace;
+    border-bottom: 3px dashed ${props => props.theme.color.blue5};
+    color: ${props => props.theme.color.blue5};
   }
 `;
