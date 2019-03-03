@@ -69,7 +69,7 @@ module.exports = {
         name: `Scatterbeam Web Development Dojo`,
         short_name: `Scatterbeam`,
         start_url: `/`,
-        background_color: `#e4572e`,
+        background_color: `#f1f2eb`,
         theme_color: `#6fffe9`,
         display: `minimal-ui`,
         icon: `src/assets/iconfinder_Newsvine_128x128_10922.png`
