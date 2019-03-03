@@ -4793,6 +4793,11 @@ gatsby-cli@^2.4.11:
     yargs "^11.1.0"
     yurnalist "^1.0.2"
 
+gatsby-dynamic-image@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-dynamic-image/-/gatsby-dynamic-image-0.2.0.tgz#4581e701a78a425d815dd0f0ec9e603593ffb584"
+  integrity sha512-OByfkA3j3KhcoV5vwXIfPjZH91ynxLIpUcvdR8A2pLHY6cbK90/Gu2L6u7sdAMpQNs+zTVa2aBwU7kPJCJCOVQ==
+
 gatsby-image@^2.0.29:
   version "2.0.29"
   resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.29.tgz#38475842b6e9a5d58c4e3bec875179b959c7d7ab"
