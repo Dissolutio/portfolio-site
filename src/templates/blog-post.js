@@ -1,7 +1,10 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import styled from "styled-components";
 
 import StrataLayout from "layouts/StrataLayout";
+import Bio from "components/Bio";
+
 import { rhythm, scale } from "utilities/typography";
 
 class BlogPostTemplate extends React.Component {
@@ -12,22 +15,25 @@ class BlogPostTemplate extends React.Component {
     console.log(data);
     return (
       <StrataLayout location={location} data={data}>
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: "block",
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1)
-          }}>
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1)
-          }}
-        />
+        <MainPageWrap>
+          <h1>{post.frontmatter.title}</h1>
+          <p
+            style={{
+              ...scale(-1 / 5),
+              display: "block",
+              marginBottom: rhythm(1),
+              marginTop: rhythm(-1)
+            }}>
+            {post.frontmatter.date}
+          </p>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <hr
+            style={{
+              marginBottom: rhythm(1)
+            }}
+          />
+          <Bio />
+        </MainPageWrap>
         <ul
           style={{
             display: "flex",
@@ -39,14 +45,14 @@ class BlogPostTemplate extends React.Component {
           <li>
             {previous && (
               <Link to={previous.frontmatter.path} rel="prev">
-                ← {previous.frontmatter.title}
+                ← Previous: {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.frontmatter.path} rel="next">
-                {next.frontmatter.title} →
+                Next: {next.frontmatter.title} →
               </Link>
             )}
           </li>
@@ -56,6 +62,12 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
+const MainPageWrap = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0px 1.0875rem 1.45rem;
+`;
+
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
@@ -64,7 +76,22 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
-        author
+      }
+    }
+    background: file(relativePath: { eq: "jason-leung-714414-unsplash.jpg" }) {
+      publicURL
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    profilePic: file(relativePath: { eq: "profile-pic.jpg" }) {
+      publicURL
+      childImageSharp {
+        fluid(maxWidth: 200, maxHeight: 200) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
@@ -75,13 +102,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         path
-      }
-    }
-    background: file(relativePath: { eq: "jason-leung-714414-unsplash.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
       }
     }
   }
