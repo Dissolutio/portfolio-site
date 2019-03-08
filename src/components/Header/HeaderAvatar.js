@@ -1,13 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
-import { Link } from "gatsby";
+import { Link, StaticQuery } from "gatsby";
 
-const HeaderAvatar = ({ fluid }) => (
-  <HomePageLinkAvatar to="/">
-    <AvatarOverlay />
-    <Img fluid={fluid} />
-  </HomePageLinkAvatar>
+const HeaderAvatar = () => (
+  <StaticQuery
+    query={graphql`
+      query ProfilePicQuery {
+        profilePic: file(relativePath: { eq: "profile-pic.jpg" }) {
+          publicURL
+          childImageSharp {
+            fluid(maxWidth: 200, maxHeight: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <HomePageLinkAvatar to="/">
+        <AvatarOverlay />
+        <Img fluid={data.profilePic.childImageSharp.fluid} alt="John Moen" />
+      </HomePageLinkAvatar>
+    )}
+  />
 );
 const HomePageLinkAvatar = styled(Link)`
   position: relative;

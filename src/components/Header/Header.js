@@ -7,7 +7,7 @@ import MainNav from "./MainNav";
 const Header = ({ data }) => (
   <HeaderContainer>
     <HeaderContent>
-      <HeaderAvatar fluid={data.profilePic.childImageSharp.fluid} />
+      <HeaderAvatar />
       <h1>John Moen</h1>
       <h2>Frontend Developer</h2>
       <MainNav />
@@ -22,7 +22,6 @@ const HeaderContent = styled.div`
   flex-grow: 1;
   flex-shrink: 0;
   font-size: 1rem;
-  margin: 0 0 2rem 0;
   width: 100%;
   height: 100%;
   padding: 1rem;
