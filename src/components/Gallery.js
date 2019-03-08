@@ -1,10 +1,17 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import { chunk } from "lodash";
+
 import Lightbox from "react-images";
+import Image from "gatsby-dynamic-image";
+import { Container, Row, Col } from "react-awesome-styled-grid";
+import overlay from "assets/overlay.png";
 
 class Gallery extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       lightboxIsOpen: false,
@@ -12,9 +19,9 @@ class Gallery extends Component {
     };
 
     this.closeLightbox = this.closeLightbox.bind(this);
-    this.gotoNext = this.gotoNext.bind(this);
-    this.gotoPrevious = this.gotoPrevious.bind(this);
-    this.gotoImage = this.gotoImage.bind(this);
+    this.goToNext = this.goToNext.bind(this);
+    this.goToPrevious = this.goToPrevious.bind(this);
+    this.goToImage = this.goToImage.bind(this);
     this.handleClickImage = this.handleClickImage.bind(this);
     this.openLightbox = this.openLightbox.bind(this);
   }
@@ -31,45 +38,54 @@ class Gallery extends Component {
       lightboxIsOpen: false
     });
   }
-  gotoPrevious() {
+  goToPrevious() {
     this.setState({
       currentImage: this.state.currentImage - 1
     });
   }
-  gotoNext() {
+  goToNext() {
     this.setState({
       currentImage: this.state.currentImage + 1
     });
   }
-  gotoImage(index) {
+  goToImage(index) {
     this.setState({
       currentImage: index
     });
   }
   handleClickImage() {
-    if (this.state.currentImage === this.props.images.length - 1) return;
+    if (this.state.currentImage === this.props.imageNodes.length - 1) return;
 
-    this.gotoNext();
+    this.goToNext();
   }
   renderGallery() {
-    const { images } = this.props;
+    const { imageNodes } = this.props;
 
-    if (!images) return;
+    if (!imageNodes) return;
 
-    const gallery = images.map((obj, i) => {
-      return (
-        <article key={i}>
-          <a href={obj.src} onClick={e => this.openLightbox(i, e)}>
-            <img src={obj.thumbnail} />
-          </a>
+    const imageNodesByTwos = chunk(imageNodes, 2);
 
-          <h3>{obj.caption}</h3>
-          <p>{obj.description}</p>
-        </article>
-      );
-    });
+    const gallery = imageNodesByTwos.map(chunk => (
+      <Row>
+        {chunk.map((node, index) => {
+          const { caption, publicURL, description, alt } = node;
+          const url = node.childImageSharp.fluid.src || publicURL;
+          return (
+            <Col xs={4} md={4} lg={6} key={index}>
+              <article>
+                <FrameLink to={url} onClick={e => this.openLightbox(index, e)}>
+                  <Image node={node} alt={alt} />
+                </FrameLink>
+                <h3>{caption}</h3>
+                <p>{description}</p>
+              </article>
+            </Col>
+          );
+        })}
+      </Row>
+    ));
 
-    return <div>{gallery}</div>;
+    return <Container>{gallery}</Container>;
   }
   render() {
     return (
@@ -77,12 +93,12 @@ class Gallery extends Component {
         {this.renderGallery()}
         <Lightbox
           currentImage={this.state.currentImage}
-          images={this.props.images}
+          images={this.props.imageNodes}
           isOpen={this.state.lightboxIsOpen}
           onClickImage={this.handleClickImage}
-          onClickNext={this.gotoNext}
-          onClickPrev={this.gotoPrevious}
-          onClickThumbnail={this.gotoImage}
+          onClickNext={this.goToNext}
+          onClickPrev={this.goToPrevious}
+          onClickThumbnail={this.goToImage}
           onClose={this.closeLightbox}
         />
       </div>
@@ -92,7 +108,62 @@ class Gallery extends Component {
 
 Gallery.displayName = "Gallery";
 Gallery.propTypes = {
-  images: PropTypes.array
+  imageNodes: PropTypes.array
 };
-
+const FrameLink = styled(Link)`
+  display: block;
+  text-align: center;
+  border-radius: 0.35em;
+  border: 0;
+  position: relative;
+  /* margin-top: 2rem; */
+  box-shadow: none;
+  :hover {
+    opacity: 1;
+  }
+  img {
+    border-radius: 0.35em;
+    display: block;
+    width: 100%;
+  }
+  /* an overlay on hover */
+  ::before {
+    border-radius: 0.35em;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+  }
+  :hover ::before {
+    display: block;
+    content: "";
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: url(${overlay});
+    opacity: 1;
+    z-index: 10;
+  }
+  :hover ::after {
+    transition: opacity 0.2s ease-in-out;
+    border-radius: 0.35em;
+    border: solid 3px rgba(255, 255, 255, 0.5);
+    color: #fff;
+    content: "View";
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 400;
+    left: 50%;
+    line-height: 2.25em;
+    margin: -1.25em 0 0 -3em;
+    opacity: 1;
+    padding: 0 1.5em;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 50%;
+    white-space: nowrap;
+    z-index: 10;
+  }
+`;
 export default Gallery;
