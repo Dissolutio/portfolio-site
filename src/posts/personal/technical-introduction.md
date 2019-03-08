@@ -2,7 +2,7 @@
 title: "Technical Introductions"
 date: "2018-03-30T20:15:00.000Z"
 path: "/posts/personal/technical-introduction/"
-tags: ["beginning","overview", "introductions"]
+tags: ["beginning", "overview", "introductions"]
 category: "Personal"
 ---
 
@@ -27,7 +27,7 @@ They're powerful too, and web development as a skill can have a major impact bot
 ### Skills to hone
 
 - **Keyboard Skills** Get comfortable with hotkeys, learn to edit text a little more rapidly with shortcuts, even if they feel hard at first. This is so important, if you're crunched for time and need efficiency (who doesn't?), and I can honestly tell you I work WAY faster than I did at first. I move text like a bulldozer moves dirt and I bet I look awesome but nobody is watching.
-- **Search Skills** Include the language (HTML/CSS/javaScript/react/markdown) and the command, error, or thing you're trying to do in your searches. Carefully hunt answers, the more thumbs up on it the better, know of [Stack Overflow](http://www.stackoverflow.com 'A developer forum site').
+- **Search Skills** Include the language (HTML/CSS/javaScript/react/markdown) and the command, error, or thing you're trying to do in your searches. Carefully hunt answers, the more thumbs up on it the better, know of [Stack Overflow](http://www.stackoverflow.com "A developer forum site").
 - **Command Line Basics** We gotta do stuff from inside directories(files). It's not scary. You type little snippets, or copy/paste them from the web, and this lets you `npm install` or `sass --watch scss:css` or `git commit` or `gatsby develop` or `netlify deploy`. You'll notice I just told `npm`, `sass`, `git` and gang all to do something. The _command_ line, ;)
 
 Little websites made up of HTML and CSS are absolutely adorable, like Wall-E, and sturdy like him too. I'm not experienced enough to say you can't do web development without HTML/CSS, but I **am** experienced enough to say that you can probably learn them **while** you learn the more robust part, the part that's gonna take a good long minute to make sense.
@@ -35,7 +35,6 @@ Little websites made up of HTML and CSS are absolutely adorable, like Wall-E, an
 I consider this robust, difficult part to be JavaScript.
 
 There's probably a lot of great mini-projects out there. I know I found a bunch.
-The mother lode for me was the [JavascSipt30](http://www.javascript30.com 'JavascSipt30 Homepage') course. You can do a lot with JavaScript, and doing some every day is how you learn the big stuff in life.
+The mother lode for me was the [JavascSipt30](http://www.javascript30.com "JavascSipt30 Homepage") course. You can do a lot with JavaScript, and doing some every day is how you learn the big stuff in life.
 
 Now, I'm still quite a noob I assume, but I've come a long way. These are things that 6 months ago I had no clue what they were, **nevermind** what they did. SASS, React.js, Node.js, Webpack, GraphQL. I'm still overwhelmed on some level, but I'm using all these tools now. Do I understand them completely? No, but that's the beauty of programming. You don't _have_ to understand it completely to use it and build off of it.
-[The human behind the keyboard](/post/personal/personal-introduction)
