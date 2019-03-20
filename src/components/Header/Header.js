@@ -25,6 +25,8 @@ const HeaderContent = styled.div`
   width: 100%;
   height: 100%;
   padding: 1rem;
+  background-color: rgba(34, 34, 35, 0.3);
+  border-radius: 3em;
   h1 {
     font-size: 1.6rem;
   }
@@ -39,7 +41,7 @@ const HeaderContainer = styled.div`
   padding: 2rem;
   color: ${props => props.theme.color.white};
   height: 100%;
-  background-color: rgba(47, 47, 47, 0.5);
+  background-color: rgba(47, 47, 47, 0.7);
 `;
 const HeroBackgroundDiv = styled.div`
   position: absolute;
