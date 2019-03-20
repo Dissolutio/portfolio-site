@@ -65,6 +65,7 @@ const IndexPage = ({ data }) => {
   return (
     <StrataLayout data={data}>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <Section1 />
       <Gallery imageNodes={imageNodes} />
     </StrataLayout>
   );
