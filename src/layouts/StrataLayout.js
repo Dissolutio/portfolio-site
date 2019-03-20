@@ -41,14 +41,16 @@ const HeaderWrapper = styled.header`
     `}
 `;
 const MainPageWrapper = styled.div`
-  padding: 3%;
+  padding: 1rem;
   ${props => props.theme.media.medium`
   margin-left: 30%;
   max-width: 70%;
+  padding: 2rem;
   `}
   ${props => props.theme.media.large`
  margin-left: 35%;
  max-width: 65%;
+ padding: 2rem;
  `}
 `;
 

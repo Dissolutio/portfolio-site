@@ -65,8 +65,8 @@ class Gallery extends Component {
 
     const imageNodesByTwos = chunk(imageNodes, 2);
 
-    const gallery = imageNodesByTwos.map(chunk => (
-      <Row>
+    const gallery = imageNodesByTwos.map((chunk, index) => (
+      <Row key={index}>
         {chunk.map((node, index) => {
           const { caption, publicURL, description, alt } = node;
           const url = node.childImageSharp.fluid.src || publicURL;
