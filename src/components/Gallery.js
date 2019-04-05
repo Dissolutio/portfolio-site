@@ -87,7 +87,13 @@ class Gallery extends Component {
       </Row>
     ));
 
-    return <Container>{gallery}</Container>;
+    return (
+      <Container>
+        <h2 style={{ textAlign: "center" }}>My Portfolio</h2>
+        <hr />
+        {gallery}
+      </Container>
+    );
   }
   render() {
     return (

@@ -3,12 +3,16 @@ import styled from "styled-components";
 import Img from "gatsby-image";
 import HeaderAvatar from "./HeaderAvatar";
 import MainNav from "./MainNav";
+import githubMark from "assets/GitHub-Mark-Light-32px.png";
 
 const Header = ({ data }) => (
   <HeaderContainer>
     <HeaderContent>
       <HeaderAvatar />
       <h1>John Moen</h1>
+      <a style={{ boxShadow: "none" }} href="https://github.com/Dissolutio">
+        <img src={githubMark} />
+      </a>
       <h2>Frontend Developer</h2>
       <MainNav />
     </HeaderContent>

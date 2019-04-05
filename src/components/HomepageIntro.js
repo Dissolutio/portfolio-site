@@ -8,7 +8,7 @@ const HomepageIntro = () => (
       I create websites, custom UI and web applications. My tools include:
       JavaScript, React, Node, and good old-fashioned HTML and CSS.
     </p>
-    <ActionButton>Contact Me</ActionButton>
+    {/* <ActionButton>Contact Me</ActionButton> */}
   </HomepageSection>
 );
 export default HomepageIntro;
