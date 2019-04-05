@@ -25,10 +25,10 @@ class Gallery extends Component {
     this.handleClickImage = this.handleClickImage.bind(this);
     this.openLightbox = this.openLightbox.bind(this);
   }
-  openLightbox(index, event) {
+  openLightbox(id, event) {
     event.preventDefault();
     this.setState({
-      currentImage: index,
+      currentImage: id - 1,
       lightboxIsOpen: true
     });
   }
@@ -48,14 +48,13 @@ class Gallery extends Component {
       currentImage: this.state.currentImage + 1
     });
   }
-  goToImage(index) {
+  goToImage(id) {
     this.setState({
-      currentImage: index
+      currentImage: id - 1
     });
   }
   handleClickImage() {
     if (this.state.currentImage === this.props.imageNodes.length - 1) return;
-
     this.goToNext();
   }
   renderGallery() {
@@ -68,12 +67,12 @@ class Gallery extends Component {
     const gallery = imageNodesByTwos.map((chunk, index) => (
       <Row key={index}>
         {chunk.map((node, index) => {
-          const { caption, publicURL, description, alt } = node;
+          const { caption, publicURL, description, alt, id } = node;
           const url = node.childImageSharp.fluid.src || publicURL;
           return (
             <Col xs={4} md={4} lg={6} key={index}>
               <article>
-                <FrameLink to={url} onClick={e => this.openLightbox(index, e)}>
+                <FrameLink to={url} onClick={e => this.openLightbox(id, e)}>
                   <Image node={node} alt={alt} />
                 </FrameLink>
                 <h3>{caption}</h3>

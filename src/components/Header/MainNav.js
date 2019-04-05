@@ -8,6 +8,9 @@ export default class MainNav extends Component {
       <nav>
         <ul>
           <li>
+            <StyledLink to="/">Home</StyledLink>
+          </li>
+          <li>
             <StyledLink to="/about">About</StyledLink>
           </li>
           <li>

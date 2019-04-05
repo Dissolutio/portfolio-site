@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import StrataLayout from "layouts/StrataLayout";
 import SEO from "../components/seo";
@@ -14,12 +13,14 @@ const SecondPage = ({ data }) => (
       me tell you, I am having an incredible time.
     </p>
     <h2>My primary tools are JavaScript and React</h2>
-    <p>Both me and the modern toolset are becoming sharper every single day!</p>
+    <p>Both me and the modern toolset are becoming sharper every single day.</p>
     <h2>Modern web development offers powerful possibilities</h2>
-    An well-made tool can empower human and tribe alike, and bring joy through
-    its very use. The software of the future will both describe and define us.
     <p>
-      <h2>The challenges facing humanity are great</h2>
+      An well-made tool can empower human and tribe alike, and bring joy through
+      its very use. The software of the future will both describe and define us.
+    </p>
+    <h2>The challenges facing humanity are great</h2>
+    <p>
       There are helpers around the world who are drawn to a similar vision.
       These people are doing urgent work, and they need the power of modern
       software tools.

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
-import { Link, StaticQuery } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 
 const HeaderAvatar = () => (
   <StaticQuery
@@ -18,14 +18,14 @@ const HeaderAvatar = () => (
       }
     `}
     render={data => (
-      <HomePageLinkAvatar to="/">
+      <HomePageLinkAvatar>
         <AvatarOverlay />
         <Img fluid={data.profilePic.childImageSharp.fluid} alt="John Moen" />
       </HomePageLinkAvatar>
     )}
   />
 );
-const HomePageLinkAvatar = styled(Link)`
+const HomePageLinkAvatar = styled.div`
   position: relative;
   height: 100px;
   width: 100px;

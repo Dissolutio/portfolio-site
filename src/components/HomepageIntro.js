@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Row, Col } from "react-awesome-styled-grid";
 
-const Section1 = () => (
-  <>
-    <h2>I'm John, a frontend developer based in Austin, TX.</h2>
+const HomepageIntro = () => (
+  <HomepageSection>
+    <h2>I'm John, a frontend developer based in Austin,&nbsp;TX.</h2>
     <p>
-      I create UI and websites using JavaScript, React, Node, and good old
-      fashioned HTML and CSS. I am fascinated by what is possible, and motivated
-      by what is needed. There's amazing tools waiting to be built, and amazing
-      people waiting to use them!
+      I create websites, custom UI and web applications. My tools include:
+      JavaScript, React, Node, and good old-fashioned HTML and CSS.
     </p>
-    <ActionButton>Learn More</ActionButton>
-  </>
+    <ActionButton>Contact Me</ActionButton>
+  </HomepageSection>
 );
-export default Section1;
+export default HomepageIntro;
 
+const HomepageSection = styled.section`
+  padding: 1em;
+`;
 const ActionButton = styled.button`
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
     border-color 0.2s ease-in-out;
@@ -30,6 +30,7 @@ const ActionButton = styled.button`
   line-height: 2.75em;
   min-width: 10em;
   padding: 0 1.5em;
+  margin-bottom: 1em;
   text-align: center;
   white-space: nowrap;
   &:hover {

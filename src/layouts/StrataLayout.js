@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { ThemeProvider, css } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Header from "components/Header/Header";
 import { theme } from "./theme";
 import "sanitize.css";
