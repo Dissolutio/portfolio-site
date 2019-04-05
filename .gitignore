@@ -75,3 +75,5 @@ rollover/
 \.env\.production
 
 playground-gatsby\.code-workspace
+
+\.netlify/
