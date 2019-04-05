@@ -10,7 +10,7 @@ import { portfolioImageInfo } from "utilities/portfolioImageInfo";
 const IndexPage = ({ data }) => {
   // combine queried nodes with corresponding caption/description
   const imageNodes = portfolioImageInfo.map(
-    ({ alt, caption, description, id }) => {
+    ({ alt, caption, description, id, weblink }) => {
       const sharpImage = data.galleryOne.edges.filter(edge =>
         edge.node.childImageSharp.fluid.originalName.includes(id)
       )[0];
@@ -18,6 +18,7 @@ const IndexPage = ({ data }) => {
         ...sharpImage.node,
         caption,
         id,
+        weblink,
         description,
         alt,
         src: sharpImage.node.childImageSharp.fluid.src,

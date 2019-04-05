@@ -67,7 +67,7 @@ class Gallery extends Component {
     const gallery = imageNodesByTwos.map((chunk, index) => (
       <Row key={index}>
         {chunk.map((node, index) => {
-          const { caption, publicURL, description, alt, id } = node;
+          const { caption, publicURL, description, alt, id, weblink } = node;
           const url = node.childImageSharp.fluid.src || publicURL;
           return (
             <Col xs={4} md={4} lg={6} key={index}>
@@ -76,6 +76,9 @@ class Gallery extends Component {
                   <Image node={node} alt={alt} />
                 </FrameLink>
                 <h3>{caption}</h3>
+                <h4>
+                  <a href={weblink}>{weblink}</a>
+                </h4>
                 <p>{description}</p>
               </article>
             </Col>
