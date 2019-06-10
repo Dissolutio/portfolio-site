@@ -10,9 +10,9 @@ const Header = ({ data }) => (
 	<HeaderContainer>
 		<HeaderContent>
 			<HeaderAvatar />
-			<h1>John Moen</h1>
-			<h2>Full Stack Developer</h2>
-			<h3>Austin, TX</h3>
+			<HeaderText>John Moen</HeaderText>
+			<HeaderText>Full Stack Developer</HeaderText>
+			<HeaderText>Austin, TX</HeaderText>
 			<a style={{ marginRight: '10px', boxShadow: 'none' }} href="https://github.com/Dissolutio">
 				<img src={githubMark} />
 			</a>
@@ -51,6 +51,11 @@ const HeaderContainer = styled.div`
 	color: ${props => props.theme.color.white};
 	height: 100%;
 	background-color: rgba(47, 47, 47, 0.7);
+`
+const HeaderText = styled.p`
+	font-size: 1.3rem;
+	display: block;
+	padding: 0.2rem;
 `
 const HeroBackgroundDiv = styled.div`
 	position: absolute;
