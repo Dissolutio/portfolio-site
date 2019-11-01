@@ -13,7 +13,7 @@ export const portfolioImageInfo = [
 		caption: 'Heroscape Armory',
 		weblink: 'https://heroscape-armory.com/',
 		description:
-			'A game aid for a strategy boardgame. Built with React, and Firebase realtime database and authentication.',
+			'A game aid for a strategy boardgame. Built with React, and Firebase realtime database.',
 	},
 	{
 		id: 3,
