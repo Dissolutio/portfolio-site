@@ -11,7 +11,7 @@ const Header = ({ data }) => (
 		<HeaderContent>
 			<HeaderAvatar />
 			<HeaderText>John Moen</HeaderText>
-			<HeaderText>Full Stack Developer</HeaderText>
+			<HeaderText>Frontend Web Developer</HeaderText>
 			<HeaderText>Austin, TX</HeaderText>
 			<a style={{ marginRight: '10px', boxShadow: 'none' }} href="https://github.com/Dissolutio">
 				<img src={githubMark} />
