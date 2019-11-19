@@ -23,7 +23,7 @@ export default class MainNav extends Component {
 }
 const StyledLink = styled(Link)`
 	text-decoration: none;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	color: ${props => props.theme.color.blue5};
 	border: none;
 	box-shadow: none;

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import StrataLayout from "layouts/StrataLayout";
 import Bio from "components/Bio";
 
-import { rhythm, scale } from "utilities/typography";
+import { rhythm } from "utilities/typography";
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -17,15 +17,6 @@ class BlogPostTemplate extends React.Component {
       <StrataLayout location={location} data={data}>
         <MainPageWrap>
           <h1>{post.frontmatter.title}</h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: "block",
-              marginBottom: rhythm(1),
-              marginTop: rhythm(-1)
-            }}>
-            {post.frontmatter.date}
-          </p>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
@@ -66,6 +57,9 @@ const MainPageWrap = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
+  h1 {
+    font-size: 1.6rem;
+  }
 `;
 
 export default BlogPostTemplate;

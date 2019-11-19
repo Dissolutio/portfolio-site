@@ -10,7 +10,7 @@ const Header = ({ data }) => (
 	<HeaderContainer>
 		<HeaderContent>
 			<HeaderAvatar />
-			<HeaderText>John Moen</HeaderText>
+			<h1>John Moen</h1>
 			<HeaderText>Frontend Web Developer</HeaderText>
 			<HeaderText>Austin, TX</HeaderText>
 			<a style={{ marginRight: '10px', boxShadow: 'none' }} href="https://github.com/Dissolutio">
@@ -33,14 +33,10 @@ const HeaderContent = styled.div`
 	font-size: 1rem;
 	width: 100%;
 	height: 100%;
-	padding: 1rem;
 	background-color: rgba(34, 34, 35, 0.3);
 	border-radius: 3em;
 	h1 {
-		font-size: 1.6rem;
-	}
-	h2 {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 	}
 `
 const HeaderContainer = styled.div`
@@ -52,10 +48,11 @@ const HeaderContainer = styled.div`
 	height: 100%;
 	background-color: rgba(47, 47, 47, 0.7);
 `
-const HeaderText = styled.p`
-	font-size: 1.3rem;
-	display: block;
+const HeaderText = styled.div`
+	font-size: 0.9rem;
 	padding: 0.2rem;
+	margin-bottom: 1rem;
+	margin-top: -0.5rem;
 `
 const HeroBackgroundDiv = styled.div`
 	position: absolute;
