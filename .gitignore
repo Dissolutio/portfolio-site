@@ -68,12 +68,11 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-rollover/
-
 \.env\.development
 
 \.env\.production
 
-playground-gatsby\.code-workspace
 
 \.netlify/
+.history/
+.vscode/

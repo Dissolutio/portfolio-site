@@ -1,16 +1,15 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "portfolio-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "John Moen's Gatsby portfolio blog",
+  "version": "0.2.0",
+  "author": "John Moen <entity.john@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.1.9",
     "gatsby-dynamic-image": "^0.2.0",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-feed": "^2.0.13",
-    "gatsby-plugin-google-analytics": "^2.0.14",
     "gatsby-plugin-google-fonts": "^0.0.4",
     "gatsby-plugin-manifest": "^2.0.17",
     "gatsby-plugin-offline": "^2.0.24",
@@ -39,9 +38,7 @@
     "sanitize.css": "^8.0.0",
     "styled-components": "^4.1.3",
     "typography": "^0.16.18",
-    "typography-theme-anonymous": "^0.15.10",
-    "typography-theme-grand-view": "^0.16.18",
-    "typography-theme-us-web-design-standards": "^0.16.18"
+    "typography-theme-anonymous": "^0.15.10"
   },
   "keywords": [
     "gatsby"
