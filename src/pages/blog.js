@@ -13,6 +13,7 @@ export default class BlogPage extends Component {
       <StrataLayout location={location} data={data}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <h1>Blog</h1>
+        <PostGroupList posts={posts} groupTitle="2021" groupSortTitle="2021" />
         <PostGroupList
           posts={posts}
           groupTitle="React"
@@ -27,11 +28,6 @@ export default class BlogPage extends Component {
           posts={posts}
           groupTitle="Learning Node"
           groupSortTitle="Learning Node"
-        />
-        <PostGroupList
-          posts={posts}
-          groupTitle="Personal"
-          groupSortTitle="Personal"
         />
       </StrataLayout>
     );

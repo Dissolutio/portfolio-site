@@ -76,3 +76,4 @@ yarn-error.log
 \.netlify/
 .history/
 .vscode/
+dev-notes/

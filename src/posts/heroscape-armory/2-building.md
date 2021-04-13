@@ -1,9 +1,9 @@
 ---
-title: 'Adding State to our UI'
-date: '2018-10-19T09:01:00.000Z'
-path: '/posts/heroscape-armory/building'
-tags: ['react', 'app', 'firebase', 'heroscape-armory']
-category: 'Heroscape Armory'
+title: "Adding State to our UI"
+date: "2018-10-19T09:01:00.000Z"
+path: "/posts/heroscape-armory/building"
+tags: ["react", "app", "firebase", "heroscape-armory"]
+category: "Heroscape Armory"
 ---
 
 ## Adding State Methodically
@@ -28,8 +28,8 @@ And to conditionally render on presence or absence of an object property:
 ```js
 // armyProp = {}
 
-const { property1, property2 } = props.armyProp
-const propertyToDisplay = property1 && property1.doStuff()
+const { property1, property2 } = props.armyProp;
+const propertyToDisplay = property1 && property1.doStuff();
 ```
 
 ## Add some real State
@@ -42,10 +42,10 @@ componentDidMount = () => {
   setTimeout(() => {
     this.setState(
       { cardsToDisplay: sampleCardArray },
-      console.log('CardsToDisplay Loaded!')
-    )
-  }, 3000)
-}
+      console.log("CardsToDisplay Loaded!")
+    );
+  }, 3000);
+};
 ```
 
 So voila, our components don't crash when state is empty, and update just fine when state is loaded:
@@ -65,15 +65,15 @@ In our state container initialize the search value as an empty string, and creat
 
 this.state = {
   army: {},
-  gallerySearchValue: '',
+  gallerySearchValue: "",
   cards: [],
   cardsToDisplay: [],
-}
+};
 
-gallerySearchChange = e => {
-  e.preventDefault()
-  this.setState({ gallerySearchValue: e.target.value })
-}
+gallerySearchChange = (e) => {
+  e.preventDefault();
+  this.setState({ gallerySearchValue: e.target.value });
+};
 ```
 
 Then pass this handler down to the input that needs it.</summary>
@@ -117,15 +117,15 @@ In my state container, I will have a method and the state for toggling the modal
 ```js
 toggleModalCard = (event, card) => {
   if (!card) {
-    card = {}
+    card = {};
   }
   this.setState({
     modalCard: {
       on: !this.state.modalCard.on,
       card: card,
     },
-  })
-}
+  });
+};
 ```
 
 1. There are over 200 heroscape cards, so when they load up we cannot just show 200 cards with thumbnails on someone's screen. To keep the app snappy, we must [create a Pagination component, which I cover in this React post!](/posts/react/paginator)
@@ -133,5 +133,3 @@ toggleModalCard = (event, card) => {
 2. We must initialize firebase in our React App, as that is where I am storing the card data, as well as the card portrait thumbnails. [This is also covered in its own post!](/posts/react/adding-firebase)
 
 3. We have to style this thing so that it is easy to use, and purty to look at!
-
-After we do that, [let's finalize and deploy this thing!](/posts/heroscape-armory/)

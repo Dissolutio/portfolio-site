@@ -17,10 +17,10 @@ class BlogPostTemplate extends React.Component {
       <StrataLayout location={location} data={data}>
         <MainPageWrap>
           <h1>{post.frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <article dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
-              marginBottom: rhythm(1)
+              marginBottom: rhythm(1),
             }}
           />
           <Bio />
@@ -31,8 +31,9 @@ class BlogPostTemplate extends React.Component {
             flexWrap: "wrap",
             justifyContent: "space-between",
             listStyle: "none",
-            padding: 0
-          }}>
+            padding: 0,
+          }}
+        >
           <li>
             {previous && (
               <Link to={previous.frontmatter.path} rel="prev">
@@ -53,7 +54,7 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-const MainPageWrap = styled.div`
+const MainPageWrap = styled.main`
   max-width: 800px;
   margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
