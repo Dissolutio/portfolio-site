@@ -25,7 +25,7 @@ With this project's setup, you have 2 options:
 1. Join Match: a text input to enter a matchID
 2. Create Match: a range input for number of players
 
-Both of them also have a text input for your name. That's an important point about order of operations with then bgio setup: The client must supply a name when joining a match.
+Both of them also have a text input for your name. That's an important point about order of operations with the bgio /joinMatch API endpoint: The client must supply a name when joining a match.
 
 </section>
 
@@ -37,7 +37,7 @@ Private/Public/Join
 
 This one is cool, with cool card animations.
 
-We see+ an interesting `<Route/>` in the `<Switch/>`
+We see an interesting `<Route/>` in the `<Switch/>`
 
 ```js
 // ...in App.js
@@ -69,7 +69,8 @@ It renders just one Client with playerID="0". We can then use the BGIO Debug UI 
 
 ### Matchmaking magic of Briscola
 
-Also worth noting: Clicking "Public Lobby" on the homepage will fire this handy bit of logic:
+Get automatically matched into an open match!
+Clicking "Public Lobby" on the homepage will fire this handy bit of logic:
 
 ```js
 // ...in HomePage.js
@@ -115,7 +116,7 @@ joinQueue = () => {
 
 Private/Public/Join
 
-Seems to be some kind of template pattern, this lobby is very similar to the Briscola one, and I recall seeing other similar sites / bgio-apps. This apparent pattern led me to deep dive into the projects code to see how my own Lobby/Server construction could improve and change.
+Seems to be some kind of template pattern, this lobby is very similar to the Briscola one, and I recall seeing other similar lobbies. This apparent pattern led me to deep dive into the projects code to see how my own Lobby/Server construction could improve and change.
 
 </section>
 
